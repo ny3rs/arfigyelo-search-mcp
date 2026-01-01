@@ -1,0 +1,24 @@
+[project]
+name = "arfigyelo-search-mcp"
+version = "0.1.0"
+description = "MCP server for fuzzy product search over Árfigyelő daily price data"
+authors = [{name = "ChatGPT"}]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp>=1.25.0",
+    "pandas>=2.3.0",
+    "openpyxl>=3.1.0",
+    "rapidfuzz>=3.14.0",
+    "requests>=2.32.0",
+]
+
+[project.scripts]
+arfigyelo-search = "arfigyelo_search_mcp.cli:main"
+
+[project.optional-dependencies]
+dev = ["ruff>=0.8.0"]
+
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
